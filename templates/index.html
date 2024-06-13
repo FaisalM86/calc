@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thermal Balance Calculator (Test)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: grid;
+            grid-gap: 10px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Thermal Balance Calculator</h1>
+    <form method="POST">
+        <label>Surfaces (U-value, Area, External temp):</label>
+        <input type="text" name="surfaces" placeholder="0.35,50,35" required>
+        <input type="text" name="surfaces" placeholder="0.45,30,32" required>
+        <input type="text" name="surfaces" placeholder="0.30,40,30" required>
+
+        <label>Lights/Personnel Heat Gain (W):</label>
+        <input type="number" step="0.01" name="lights_personnel" required>
+
+        <label>Equipment Heat Gain (W):</label>
+        <input type="number" step="0.01" name="equipment" required>
+
+        <label>Miscellaneous Heat Gain (W):</label>
+        <input type="number" step="0.01" name="miscellaneous" required>
+
+        <label>Ventilation Flow Rate (ac/h):</label>
+        <input type="number" step="0.01" name="ventilation_flow_rate" required>
+
+        <label>Air Density (kg/m³):</label>
+        <input type="number" step="0.01" name="air_density" required>
+
+        <label>Specific Heat Capacity (J/(kg·K)):</label>
+        <input type="number" step="0.01" name="specific_heat_capacity" required>
+
+        <label>Supply Air Temperature (°C):</label>
+        <input type="number" step="0.01" name="supply_air_temp" required>
+
+        <label>Initial Room Temperature (°C):</label>
+        <input type="number" step="0.01" name="room_temp" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+</div>
+</body>
+</html>
